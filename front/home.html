@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EisenHower Matrix</title>
+
+    <!-- set mata tags, author, keyword, description -->
+    <meta name="author" content="JiseonSeong" />
+    <meta
+      name="keywords"
+      content="todo, eizen, eizenhower, eizeonhower matrix, management"
+    />
+    <meta
+      name="description"
+      content="Manage your days using eizenhower matrix."
+    />
+
+    <!--Favicon-->
+    <link rel="icon" href="img/favicon.ico" />
+    <!--Favicon icon-->
+    <link rel="apple-touch-icon" href="img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- css-->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/jumbotron.css" />
+    <link rel="stylesheet" href="css/matrix.css" />
+    <jumbotron class="css"></jumbotron>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <div class="header-container">
+          <div class="title">
+            <a href="home.html">Eisen-Hower Matrix</a>
+          </div>
+          <div class="sign-container">
+            <div class="unsigned">
+              <div class="log-in"><a href="signin.html">Log in</a></div>
+              <div class="sign-up"><a href="signup.html">Sign up</a></div>
+            </div>
+          </div>
+
+          <div class="signed">
+            <div class="dropdown">
+              <div class="dropdown-button">
+                Hello, <span class="nickname">name</span>!
+                <i class="fa-sharp fa-solid fa-caret-down"></i>
+              </div>
+              <div class="dropdown-content">
+                <button id="sign-out">Log out</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--header-container-->
+    </header>
+
+    <main>
+      <div class="inner">
+        <div class="jumbotron-container">
+          <div class="jumbotron-item-main">
+            <div class="jumbotron-item-main-message">
+              <p>If you want manage your time,</p>
+              <h1>Eizen-Hower Matrix</h1>
+            </div>
+            <div class="jumbotron-item-main-image"></div>
+          </div>
+          <div class="jumbotron-item-sub">
+            <p> It helps you decide on and prioritize tasks</p>
+            <p>and prioritize tasks by urgency and importance.</p>
+          </div>
+        </div>
+        <div class="matrix-container">
+          <div class="matrix-item" id="decide">
+            <div class="matrix-item-header">
+              <div class="matrix-title">📅 Schedule a time to do it</div>
+              <input
+                type="text"
+                class="matrix-input"
+                placeholder="Put and enter."
+                maxlength="50"
+              />
+            </div>
+            <ul class="matrix-item-list">
+              <li class="list-item">
+                <div class="done-text-container">
+                  <input type="checkbox" class="matrix-done" />
+                  <p class="matrix-text">have some lunch</p>
+                </div>
+                <div class="update-delete-container">
+                  <i class="matrix-update fa-sharp fa-solid fa-pencil"></i>
+                  <i class="matrix-delete fa-solid fa-trash-can"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="matrix-item" id="do">
+            <div class="matrix-item-header">
+              <div class="matrix-title">♨️ Do it now</div>
+              <input
+                type="text"
+                class="matrix-input"
+                placeholder="Put and enter."
+                maxlength="50"
+              />
+            </div>
+            <ul class="matrix-item-list">
+              <li class="list-item">
+                <div class="done-text-container">
+                  <input type="checkbox" class="matrix-done" />
+                  <p class="matrix-text">Study English</p>
+                </div>
+                <div class="update-delete-container">
+                  <i class="matrix-update fa-sharp fa-solid fa-pencil"></i>
+                  <i class="matrix-delete fa-solid fa-trash-can"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="matrix-item" id="delegate">
+            <div class="matrix-item-header">
+              <div class="matrix-title">🙋‍♂️ Who can do it for you?</div>
+              <input
+                type="text"
+                class="matrix-input"
+                placeholder="Put and enter."
+                maxlength="50"
+              />
+            </div>
+            <ul class="matrix-item-list">
+              <li class="list-item">
+                <div class="done-text-container">
+                  <input type="checkbox" class="matrix-done" />
+                  <p class="matrix-text">Let's code review!</p>
+                </div>
+                <div class="update-delete-container">
+                  <i class="matrix-update fa-sharp fa-solid fa-pencil"></i>
+                  <i class="matrix-delete fa-solid fa-trash-can"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="matrix-item" id="delete">
+            <div class="matrix-item-header">
+              <div class="matrix-title">⏳ Eliminate it</div>
+              <input
+                type="text"
+                class="matrix-input"
+                placeholder="Put and enter."
+                maxlength="50"
+              />
+            </div>
+            <ul class="matrix-item-list">
+              <li class="list-item">
+                <div class="done-text-container">
+                  <input type="checkbox" class="matrix-done" />
+                  <p class="matrix-text">have some lunch</p>
+                </div>
+                <div class="update-delete-container">
+                  <i class="matrix-update fa-sharp fa-solid fa-pencil"></i>
+                  <i class="matrix-delete fa-solid fa-trash-can"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <span class="importance">IMPORTANTANCE</span>
+          <span class="urgency">URGENCY</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div class="footer-container">
+          <div class="author">Created by Jiseon Seong</div>
+          <div class="author-email">Email: jseong0987@gmail.com</div>
+        </div>
+      </div>
+    </footer>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+    integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/matrix.js"></script>
+  </body>
+</html>

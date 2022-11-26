@@ -1,0 +1,163 @@
+* {
+    font-family: sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+/*container*/
+
+.matrix-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-left: 3px solid var(--dark-gray);
+    border-bottom: 3px solid var(--dark-gray);
+    margin: 1rem 4rem 4rem;
+    position: relative;
+}
+
+.matrix-item {
+    width: 45%;
+    height: 30rem;
+    border: .5px solid var(--dark-gray);
+    border-radius: 5px 0 0;
+    margin: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*item header*/
+.matrix-item-header {
+    text-align: center;
+    background-color: var(--light-gray);
+    padding: 1rem 0;
+}
+
+.matrix-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.matrix-input {
+    width: 90%;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    line-height: 1.8;
+}
+
+/*item list*/
+.matrix-item-list {
+    flex: 1;
+    /*헤더를 제외한 모든 높이 차지*/
+    overflow-y: auto;
+}
+
+.list-item {
+    width: 90%;
+    margin: 0.5rem auto;
+    border: 2.5px solid var(--light-gray);
+    border-radius: 5px;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.done-text-container {
+    flex: 1;
+    /*update-delete-container 제외한 모든 높이 차지*/
+    font-size: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    /*checkbox-inputext를 일렬로 정렬*/
+}
+
+.matrix-done {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.matrix-done:checked + .matrix-text {
+    text-decoration: line-through;
+}
+
+.matrix-text {
+    flex: 1;
+    /*matrix-done을 제외한 모든 너비 차지*/
+
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /*리스트내용이 박스를 넘어가지 않도록 함*/
+}
+
+.update-delete-container {
+    font-size: 1.3rem;
+}
+
+.matrix-update {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.matrix-delete {
+    cursor: pointer;
+}
+
+#decide {
+    order: 1;
+}
+
+#do {
+    order: 2;
+}
+
+#delegate {
+    order: 4;
+}
+
+#delete {
+    order: 3;
+}
+
+/*importance and urgency position*/
+.importance {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 50%;
+    left: -4%;
+    writing-mode:vertical-lr;
+}
+
+.urgency {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: -4%;
+}
+
+/*setting mobile layout*/
+@media only all and (max-width: 768px) {
+    .matrix-container {
+        display: block;
+    }
+
+    .matrix-item {
+        width: 90%;
+        margin: 0 auto 1rem;
+    }
+
+    .importance {
+        left: -5%;
+    }
+
+    .urgency {
+        bottom: -2%;
+        left: 45%;
+    }
+}
